@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"main.java","l":"App"},{"p":"main.java.utils","l":"CSVMovieManager"},{"p":"main.java.utils","l":"ExcepcionDynamicList"},{"p":"main.java","l":"Link"},{"p":"main.java","l":"LinkList"},{"p":"main.java.entities","l":"Movie"}]
