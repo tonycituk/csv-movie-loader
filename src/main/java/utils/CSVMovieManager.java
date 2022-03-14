@@ -165,7 +165,7 @@ public class CSVMovieManager {
      * @throws ExcepcionDynamicList
      * @throws FileNotFoundException
      */
-    public void writeToCSVFromArray(String path) throws ExcepcionDynamicList, FileNotFoundException {
+    public void writeToCSVFromArray(String path, String nombre) throws ExcepcionDynamicList, FileNotFoundException {
         List<String[]> dataLines = new ArrayList<>();
         dataLines.add(new String[] { "movie_id", "movie_title", "movie_duration", "movie_budget", "movie_rate" });
 
@@ -175,7 +175,7 @@ public class CSVMovieManager {
                     String.valueOf(xMovie.getBudget()), String.valueOf(xMovie.getRate()) });
         }
 
-        File csvOutputFile = new File(path);
+        File csvOutputFile = new File(path + nombre);
         try (PrintWriter pw = new PrintWriter(csvOutputFile)) {
             dataLines.stream()
                     .map(this::convertToCSV)

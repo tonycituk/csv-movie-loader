@@ -17,8 +17,7 @@ public class App {
     public static void main(String[] args){
 
         String rutaCSVEntrada = "/home/tony/workspace/csv-movie-loader/Movie.csv";
-        String rutaCSVSalida = "/home/tony/workspace/csv-movie-loader/MovieFinal.csv";
-
+        String rutaCSVSalida = "/home/tony/workspace/csv-movie-loader/";
         try {
             CSVMovieManager csvMovieManager = new CSVMovieManager(rutaCSVEntrada);
             csvMovieManager.loadDataToArray(2000);
@@ -26,7 +25,11 @@ public class App {
             // Uncomment to test the LL methods
             //csvMovieManager.testListMethods();
 
-            csvMovieManager.writeToCSVFromArray(rutaCSVSalida);
+            csvMovieManager.writeToCSVFromArray(rutaCSVSalida, "MovieFinal.csv");
+            csvMovieManager.writeToCSVFromArray(rutaCSVSalida, "MovieFinalQuickSort.csv");
+            csvMovieManager.writeToCSVFromArray(rutaCSVSalida, "MovieFinalHeapSort.csv");
+
+
 
         } catch (NumberFormatException e) {
             // TODO Auto-generated catch block
